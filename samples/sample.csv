@@ -1,0 +1,11 @@
+order_id,ordered_on,customer,country,product,units,unit_price,total,paid,notes
+1001,2024-01-05,Ada Lovelace,United Kingdom,Analytical Engine,3,199.99,599.97,yes,"First order of the year. Delivery split across two shipments; the second one left the warehouse late."
+1002,2024-01-07,"Hopper, Grace",United States,Compiler Licence,1,1250.00,1250.00,yes,
+1003,2024-02-14,Alan Turing,United Kingdom,Cipher Machine,12,45.50,546.00,no,Awaiting purchase order.
+1004,2024-02-28,Katherine Johnson,United States,Trajectory Service,5,320.75,1603.75,yes,
+1005,2024-03-02,Marie Curie,France,Radiography Kit,2,880.00,1760.00,no,Customs paperwork pending.
+1006,2024-03-19,Nikola Tesla,Serbia,Induction Coil,7,,0.00,no,Price to be confirmed.
+1007,2024-04-01,Emmy Noether,Germany,Algebra Toolkit,4,150.25,601.00,yes,
+1008,2024-04-11,Rosalind Franklin,United Kingdom,Diffraction Plates,20,32.10,642.00,yes,Bulk discount applied.
+1009,2024-05-06,Hedy Lamarr,Austria,Frequency Hopper,1,2400.00,2400.00,yes,
+1010,2024-05-23,Claude Shannon,United States,Information Meter,6,410.00,2460.00,no,Quote expires at the end of the month.

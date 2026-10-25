@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{.Title}}</title>
+<link rel="icon" href="/favicon.ico">
+<script>
+(function(){try{var t=localStorage.getItem("csvl.theme")||"auto";var d=t==="dark"||(t==="auto"&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d){document.documentElement.classList.add("theme-dark");}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-left">
+    <a class="home" href="/" title="Recently opened files" aria-label="Recently opened files">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 1.5 7h1.75v6.5h3.25V9.75h3v3.75h3.25V7H15.5z" fill="currentColor"/></svg>
+    </a>
+    <div class="crumbs">
+      <span class="filename">{{.Title}}</span>
+      <span class="dir">&lrm;{{.Subtitle}}</span>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="iconbtn" id="theme-toggle" type="button" title="Light / dark / auto" aria-label="Switch theme">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" class="i-sun"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><path d="M8 .8v2.1M8 13.1v2.1M.8 8h2.1M13.1 8h2.1M2.9 2.9l1.5 1.5M11.6 11.6l1.5 1.5M13.1 2.9l-1.5 1.5M4.4 11.6l-1.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" class="i-moon"><path d="M13.4 9.9A5.8 5.8 0 0 1 6.1 2.6a5.9 5.9 0 1 0 7.3 7.3z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="listing">
+  <h1>{{.Heading}}</h1>
+  {{if .Parent}}<p class="up"><a href="{{.Parent}}">&larr; Parent folder</a></p>{{end}}
+  {{if .Rows}}
+  <ul class="recent">
+    {{range .Rows}}
+    <li{{if .Missing}} class="missing"{{end}}>
+      <a href="{{.URL}}">{{.Name}}</a>
+      {{if .Meta}}<span class="dir">&lrm;{{.Meta}}</span>{{end}}
+      {{if .Missing}}<span class="badge">missing</span>{{end}}
+    </li>
+    {{end}}
+  </ul>
+  {{else}}
+  <p class="muted">{{.Empty}}</p>
+  {{end}}
+  <footer class="pagefoot"><span>csv.localhost {{.Version}}</span></footer>
+</main>
+<script src="/assets/app.js"></script>
+</body>
+</html>
