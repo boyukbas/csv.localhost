@@ -15,9 +15,7 @@ behaves the same: same launcher, same session model, same dark mode.
 
 ## Install
 
-1. Build the executable (needs [Go](https://go.dev/dl/) 1.22+), or download
-   `csvlocalhost.exe` from the [latest release](https://github.com/boyukbas/csv.localhost/releases/latest)
-   and put it next to these scripts:
+1. Build `csvlocalhost.exe` (needs [Go](https://go.dev/dl/) 1.22+):
 
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\build.ps1
