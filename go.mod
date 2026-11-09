@@ -1,4 +1,4 @@
-module github.com/barisboyukbas/csv.localhost
+module github.com/boyukbas/csv.localhost
 
 go 1.24.7
 

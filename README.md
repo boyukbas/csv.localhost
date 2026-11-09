@@ -8,7 +8,7 @@ a handler for delimited text; the first double-click starts a small loopback
 server in the background, every one after that reuses it, and the server shuts
 itself down about half an hour after you close the last tab.
 
-Built the same way as its sibling [md.localhost](../md.localhost), and it
+Built the same way as its sibling [md.localhost](https://github.com/boyukbas/md.localhost), and it
 behaves the same: same launcher, same session model, same dark mode.
 
 ## Install

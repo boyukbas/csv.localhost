@@ -20,7 +20,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/barisboyukbas/csv.localhost/web"
+	"github.com/boyukbas/csv.localhost/web"
 )
 
 const tokenHeader = "X-CSVL-Token"
