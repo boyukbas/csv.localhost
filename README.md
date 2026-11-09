@@ -3,6 +3,8 @@
 Double-click a `.csv` file in Windows Explorer and it opens as a real table,
 in your default browser, at `http://csv.localhost/`.
 
+![csv.localhost showing a sample CSV sorted by total, with the summary of the country column open](docs/screenshot.png)
+
 A single ~9 MB executable with no runtime dependencies. It registers itself as
 a handler for delimited text; the first double-click starts a small loopback
 server in the background, every one after that reuses it, and the server shuts
@@ -13,8 +15,9 @@ behaves the same: same launcher, same session model, same dark mode.
 
 ## Install
 
-1. Build the executable (needs [Go](https://go.dev/dl/) 1.22+), or use the
-   `csvlocalhost.exe` shipped alongside these scripts:
+1. Build the executable (needs [Go](https://go.dev/dl/) 1.22+), or download
+   `csvlocalhost.exe` from the [latest release](https://github.com/boyukbas/csv.localhost/releases/latest)
+   and put it next to these scripts:
 
    ```powershell
    powershell -ExecutionPolicy Bypass -File .\build.ps1
@@ -173,7 +176,7 @@ Logs go to `%LOCALAPPDATA%\csv.localhost\server.log`.
 ## Layout
 
 ```
-cmd/csvlocalhost/    CLI entry point and the Windows icon resource
+cmd/csvlocalhost/    CLI entry point (open, home, serve, status, stop, ...)
 internal/server/     HTTP server, CSV engine, file watching, process control
   table.go           parsing: dialect sniffing, header and type inference
   decode.go          encoding detection and code-page decoding
